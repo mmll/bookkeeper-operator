@@ -32,3 +32,14 @@ spec:
         resources:
           requests:
             storage: 10Gi
+  jvmOptions:
+    {{- if .Values.jvmOptions }}
+{{ toYaml .Values.jvmOptions | indent 4 }}
+    {{- end }}
+  resources:
+    limits:
+      cpu: {{ .Values.resources.limits.cpu }}
+      memory: {{ .Values.resources.limits.memory }}
+    requests:
+      cpu: {{ .Values.resources.requests.cpu }}
+      memory: {{ .Values.resources.requests.memory }}
