@@ -16,7 +16,7 @@ jvmOptions:
   memoryOpts:
     - "-Xms2g"
     - "-Xmx24g"
-    - "-XX:MaxDirectMemorySize=4g"
+    - "-XX:MaxDirectMemorySize=8g"
 resources:
   limits:
     cpu: 8000m
