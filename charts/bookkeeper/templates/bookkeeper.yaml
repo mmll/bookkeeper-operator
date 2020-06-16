@@ -24,7 +24,7 @@ spec:
         storageClassName: {{ .Values.storage.className }}
         resources:
           requests:
-            storage: 100Gi
+            storage: 75Gi
 
       indexVolumeClaimTemplate:
         accessModes: [ "ReadWriteOnce" ]
