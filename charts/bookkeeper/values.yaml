@@ -20,7 +20,7 @@ jvmOptions:
 resources:
   limits:
     cpu: 8000m
-    memory: 10Gi
+    memory: 16Gi
   requests:
     cpu: 2000m
     memory: 8Gi
