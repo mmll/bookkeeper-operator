@@ -15,15 +15,15 @@ storage:
 jvmOptions:
   memoryOpts:
     - "-Xms2g"
-    - "-Xmx8g"
-    - "-XX:MaxDirectMemorySize=8g"
+    - "-Xmx4g"
+    - "-XX:MaxDirectMemorySize=4g"
 resources:
   limits:
     cpu: 8000m
-    memory: 8Gi
+    memory: 4Gi
   requests:
     cpu: 2000m
-    memory: 8Gi
+    memory: 4Gi
 options:
   enableStatistics: "true"
   statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
