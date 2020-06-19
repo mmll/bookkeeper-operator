@@ -17,14 +17,14 @@ spec:
         storageClassName: {{ .Values.storage.className }}
         resources:
           requests:
-            storage: 30Gi
+            storage: 50Gi
 
       journalVolumeClaimTemplate:
         accessModes: [ "ReadWriteOnce" ]
         storageClassName: {{ .Values.storage.className }}
         resources:
           requests:
-            storage: 30Gi
+            storage: 50Gi
 
       indexVolumeClaimTemplate:
         accessModes: [ "ReadWriteOnce" ]
@@ -34,7 +34,7 @@ spec:
             storage: 10Gi
   jvmOptions:
     {{- if .Values.jvmOptions }}
-{{ toYaml .Values.jvmOptions | indent 4 }}
+    {{ toYaml .Values.jvmOptions | indent 4 }}
     {{- end }}
   resources:
     limits:
