@@ -34,7 +34,7 @@ spec:
             storage: 10Gi
   jvmOptions:
     {{- if .Values.jvmOptions }}
-    {{ toYaml .Values.jvmOptions | indent 4 }}
+{{ toYaml .Values.jvmOptions | indent 4 }}
     {{- end }}
   resources:
     limits:
