@@ -2,7 +2,7 @@ apiVersion: "bookkeeper.pravega.io/v1alpha1"
 kind: "BookkeeperCluster"
 metadata:
   name: "pravega-bk"
-replicas: 3
+replicas: 5
 image:
   repository: pravega/bookkeeper
   pullPolicy: IfNotPresent
