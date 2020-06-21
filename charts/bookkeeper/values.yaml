@@ -20,7 +20,6 @@ replicas: 5
 zookeeperUri: zk-client:2181
 pravegaClusterName: pravega
 autoRecovery: true
-
 resources:
   requests:
     cpu: 1000m
