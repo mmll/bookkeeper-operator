@@ -17,14 +17,14 @@ spec:
         storageClassName: {{ .Values.storage.className }}
         resources:
           requests:
-            storage: 100Gi
+            storage: 250Gi
 
       journalVolumeClaimTemplate:
         accessModes: [ "ReadWriteOnce" ]
         storageClassName: {{ .Values.storage.className }}
         resources:
           requests:
-            storage: 100Gi
+            storage: 250Gi
 
       indexVolumeClaimTemplate:
         accessModes: [ "ReadWriteOnce" ]
