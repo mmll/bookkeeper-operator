@@ -22,14 +22,14 @@ pravegaClusterName: pravega
 autoRecovery: true
 resources:
   requests:
-    cpu: 4000m
-    memory: 8Gi
+    cpu: 1000m
+    memory: 3Gi
   limits:
-    cpu: 4000m
-    memory: 16Gi
+    cpu: 2
+    memory: 3Gi
 
 jvmOptions:
-  memoryOpts: ["-Xms4g", "-XX:MaxDirectMemorySize=4g"]
+  memoryOpts: ["-Xmx1g", "-XX:MaxDirectMemorySize=2g"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
