@@ -37,8 +37,3 @@ jvmOptions:
 options:
   enableStatistics: "true"
   statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
-  minorCompactionThreshold: "0.4"       
-  minorCompactionInterval: "1800"       
-  majorCompactionThreshold: "0.8"       
-  majorCompactionInterval: "43200" 
-  isForceGCAllowWhenNoSpace: "true" 
