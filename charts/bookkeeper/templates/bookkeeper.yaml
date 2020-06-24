@@ -32,6 +32,12 @@ spec:
         resources:
           requests:
             storage: 10Gi
+  options:
+    minorCompactionThreshold: "0.4"       
+    minorCompactionInterval: "1800"       
+    majorCompactionThreshold: "0.8"       
+    majorCompactionInterval: "43200" 
+    isForceGCAllowWhenNoSpace: "true" 
   jvmOptions:
     {{- if .Values.jvmOptions }}
 {{ toYaml .Values.jvmOptions | indent 4 }}
