@@ -27,7 +27,6 @@ resources:
   limits:
     cpu: 2
     memory: 8Gi
-
 jvmOptions:
   memoryOpts: ["-Xmx2g", "-XX:MaxDirectMemorySize=6g"]
   gcOpts: []
