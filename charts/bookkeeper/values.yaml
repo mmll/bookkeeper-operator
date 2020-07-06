@@ -16,7 +16,7 @@ hooks:
     repository: lachlanevenson/k8s-kubectl
     tag: v1.16.10
 
-replicas: 3
+replicas: 7
 zookeeperUri: zk-client:2181
 pravegaClusterName: pravega
 autoRecovery: true
@@ -28,7 +28,7 @@ resources:
     cpu: 2
     memory: 2Gi
 jvmOptions:
-  memoryOpts: ["-Xmx1g", "-XX:MaxDirectMemorySize=2g"]
+  memoryOpts: ["-Xmx2g", "-XX:MaxDirectMemorySize=5g"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
