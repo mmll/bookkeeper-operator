@@ -32,7 +32,8 @@ jvmOptions:
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
-
+debugLogging: true
 options:
   enableStatistics: "true"
   statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
+  log.level: "DEBUG"
