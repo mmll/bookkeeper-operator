@@ -23,12 +23,12 @@ autoRecovery: true
 resources:
   requests:
     cpu: 2000m
-    memory: 9Gi
+    memory: 6Gi
   limits:
     cpu: 2
-    memory: 9Gi
+    memory: 6Gi
 jvmOptions:
-  memoryOpts: ["-Xmx2g", "-XX:MaxDirectMemorySize=7g"]
+  memoryOpts: ["-Xmx1g", "-XX:MaxDirectMemorySize=5g"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
