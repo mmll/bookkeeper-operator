@@ -16,7 +16,7 @@ hooks:
     repository: lachlanevenson/k8s-kubectl
     tag: v1.16.10
 
-replicas: 5
+replicas: 3
 zookeeperUri: zk-client:2181
 pravegaClusterName: pravega
 autoRecovery: true
