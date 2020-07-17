@@ -33,6 +33,9 @@ spec:
           requests:
             storage: 10Gi
   options:
+    enableStatistics: "true"
+    statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
+    log.level: "DEBUG"
     minorCompactionThreshold: "0.4"       
     minorCompactionInterval: "1800"       
     majorCompactionThreshold: "0.8"       
