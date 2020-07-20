@@ -15,14 +15,14 @@ hooks:
   image:
     repository: lachlanevenson/k8s-kubectl
     tag: v1.16.10
-replicas: 3
+replicas: 4
 zookeeperUri: zk-client:2181
 pravegaClusterName: pravega
 autoRecovery: true
 resources:
   requests:
     cpu: 2000m
-    memory: 16Gi
+    memory: 8Gi
   limits:
     cpu: 4
     memory: 16Gi
