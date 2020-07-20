@@ -22,7 +22,7 @@ autoRecovery: true
 resources:
   requests:
     cpu: 2000m
-    memory: 8Gi
+    memory: 16Gi
   limits:
     cpu: 4
     memory: 16Gi
