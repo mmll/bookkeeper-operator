@@ -27,7 +27,7 @@ resources:
     cpu: 4
     memory: 16Gi
 jvmOptions:
-  memoryOpts: ["-Xmx2g", "-XX:MaxDirectMemorySize=14g"]
+  memoryOpts: ["-Xmx4g", "-XX:MaxDirectMemorySize=12g"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
