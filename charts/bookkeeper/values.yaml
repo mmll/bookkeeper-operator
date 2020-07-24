@@ -36,3 +36,5 @@ options:
   enableStatistics: "true"
   statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
   log.level: "DEBUG"
+  ledgerStorageClass: "org.apache.bookkeeper.bookie.InterleavedLedgerStorage"
+  flushEntrylogBytes: "134217728"
