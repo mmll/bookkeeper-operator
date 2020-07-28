@@ -5,10 +5,11 @@ apiVersion: "bookkeeper.pravega.io/v1alpha1"
 kind: "BookkeeperCluster"
 metadata:
   name: "pravega-bk"
-version: 0.7.0
+version: 0.8.0-2588.326fc55a2
 
 image:
-  repository: pravega/bookkeeper
+  repository: devops-repo.isus.emc.com:8116/nautilus/bookkeeper
+  tag: 0.8.0-2588.326fc55a2
   pullPolicy: IfNotPresent
 
 hooks:
