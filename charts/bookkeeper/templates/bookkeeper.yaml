@@ -35,17 +35,14 @@ spec:
   options:
     enableStatistics: "true"
     statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
+    log.level: "DEBUG"
     ledgerStorageClass: "org.apache.bookkeeper.bookie.InterleavedLedgerStorage"
     flushEntrylogBytes: "134217728"
-    log.level: "DEBUG"
     minorCompactionThreshold: "0.4"       
     minorCompactionInterval: "1800"       
     majorCompactionThreshold: "0.8"       
-    majorCompactionInterval: "43200" 
+    majorCompactionInterval: "43200"       
     isForceGCAllowWhenNoSpace: "true"
-    diskUsageThreshold: "0.90"
-    diskUsageWarnThreshold: "0.85"
-    diskUsageLwmThreshold: "0.85" 
   jvmOptions:
     {{- if .Values.jvmOptions }}
 {{ toYaml .Values.jvmOptions | indent 4 }}
