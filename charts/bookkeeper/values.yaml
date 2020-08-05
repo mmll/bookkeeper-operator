@@ -16,7 +16,7 @@ hooks:
   image:
     repository: lachlanevenson/k8s-kubectl
     tag: v1.16.10
-replicas: 4
+replicas: 3
 zookeeperUri: zk-client:2181
 pravegaClusterName: pravega
 autoRecovery: true
@@ -44,3 +44,5 @@ options:
   majorCompactionThreshold: "0.8"       
   majorCompactionInterval: "43200"       
   isForceGCAllowWhenNoSpace: "true"
+  gcWaitTime: "600000"
+  flushEntrylogBytes: "134217728"
