@@ -4,7 +4,7 @@
 
 image:
   repository: devops-repo.isus.emc.com:8116/nautilus/bookkeeper-operator
-  tag: 0.8.0-2593.6e882cf4f
+  tag: 0.1.2
   pullPolicy: IfNotPresent
 
 ## Install RBAC roles and bindings
