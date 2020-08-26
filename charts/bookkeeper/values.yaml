@@ -5,30 +5,29 @@ apiVersion: "bookkeeper.pravega.io/v1alpha1"
 kind: "BookkeeperCluster"
 metadata:
   name: "pravega-bk"
-version: 0.8.0-2593.6e882cf4f
+version: 0.7.0
 
 image:
-  repository: devops-repo.isus.emc.com:8116/nautilus/bookkeeper
-  tag: 0.8.0-2593.6e882cf4f
+  repository: pravega/bookkeeper
   pullPolicy: IfNotPresent
 
 hooks:
   image:
     repository: lachlanevenson/k8s-kubectl
     tag: v1.16.10
-replicas: 4
-zookeeperUri: zk-client:2181
-pravegaClusterName: pravega
+replicas: 8
+zookeeperUri: 10.107.39.26:2181
+pravegaClusterName: prvg-pravega
 autoRecovery: true
 resources:
   requests:
     cpu: 2000m
-    memory: 8Gi
+    memory: 2Gi
   limits:
-    cpu: 4
-    memory: 16Gi
+    cpu: 2
+    memory: 3Gi
 jvmOptions:
-  memoryOpts: ["-Xmx4g", "-XX:MaxDirectMemorySize=12g"]
+  memoryOpts: ["-Xmx1g", "-XX:MaxDirectMemorySize=1g","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/","-XX:NativeMemoryTracking=detail"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
