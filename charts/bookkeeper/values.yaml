@@ -26,9 +26,9 @@ resources:
     memory: 2Gi
   limits:
     cpu: 2
-    memory: 2Gi
+    memory: 3Gi
 jvmOptions:
-  memoryOpts: ["-Xms500M", "-Xmx500M", "-XX:MaxDirectMemorySize=500M","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/","-XX:NativeMemoryTracking=detail"]
+  memoryOpts: ["-Xms1g", "-Xmx1g", "-XX:MaxDirectMemorySize=1g","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/","-XX:NativeMemoryTracking=detail"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
