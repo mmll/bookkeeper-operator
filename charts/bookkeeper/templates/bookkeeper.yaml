@@ -43,6 +43,8 @@ spec:
     majorCompactionThreshold: "0.8"       
     majorCompactionInterval: "43200"       
     isForceGCAllowWhenNoSpace: "true"
+    isThrottleByBytes: "true"
+    compactionRateByBytes: "1000000"
   jvmOptions:
     {{- if .Values.jvmOptions }}
 {{ toYaml .Values.jvmOptions | indent 4 }}

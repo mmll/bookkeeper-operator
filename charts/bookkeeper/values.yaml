@@ -46,3 +46,12 @@ options:
   isForceGCAllowWhenNoSpace: "true"
   gcWaitTime: "600000"
   flushEntrylogBytes: "134217728"
+  isThrottleByBytes: "true"
+  compactionRateByBytes: "1000000"
+
+  # Throttle compaction by bytes or by entries.
+  # isThrottleByBytes=false
+  # Set the rate at which compaction will readd entries. The unit is adds per second.
+  # compactionRateByEntries=1000
+  # Set the rate at which compaction will readd entries. The unit is bytes added per second.
+  # compactionRateByBytes=1000000
