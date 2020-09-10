@@ -5,11 +5,11 @@ apiVersion: "bookkeeper.pravega.io/v1alpha1"
 kind: "BookkeeperCluster"
 metadata:
   name: "pravega-bk"
-version: 0.7.1-2526.b90d6ba96
+version: 0.9.0-2641.0c98b91cd
 
 image:
   repository: devops-repo.isus.emc.com:8116/nautilus/bookkeeper
-  tag: 0.7.1-2526.b90d6ba96
+  tag: 0.9.0-2641.0c98b91cd
   pullPolicy: IfNotPresent
 
 hooks:
@@ -23,12 +23,12 @@ autoRecovery: true
 resources:
   requests:
     cpu: 2000m
-    memory: 2Gi
+    memory: 3Gi
   limits:
     cpu: 2
     memory: 3Gi
 jvmOptions:
-  memoryOpts: ["-Xms1g", "-Xmx1g", "-XX:MaxDirectMemorySize=1g","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/","-XX:NativeMemoryTracking=detail"]
+  memoryOpts: ["-Xms1g", "-Xmx1g", "-XX:MaxDirectMemorySize=512M","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/","-XX:NativeMemoryTracking=detail"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
@@ -36,7 +36,7 @@ debugLogging: true
 options:
   enableStatistics: "true"
   statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
-  log.level: "DEBUG"
+  log.level: "INFO"
   ledgerStorageClass: "org.apache.bookkeeper.bookie.InterleavedLedgerStorage"
   flushEntrylogBytes: "134217728"
   minorCompactionThreshold: "0.4"       
