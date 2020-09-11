@@ -23,10 +23,10 @@ autoRecovery: true
 resources:
   requests:
     cpu: 2000m
-    memory: 3584m
+    memory: 4g
   limits:
     cpu: 2
-    memory: 3584m
+    memory: 4g
 jvmOptions:
   memoryOpts: ["-Xmx1536m", "-XX:MaxDirectMemorySize=1g","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/bk/ledgers","-XX:NativeMemoryTracking=detail"]
   gcOpts: []
