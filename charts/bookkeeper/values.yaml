@@ -6,12 +6,10 @@ kind: "BookkeeperCluster"
 metadata:
   name: "pravega-bk"
 version: 0.9.0-2641.0c98b91cd
-
 image:
   repository: devops-repo.isus.emc.com:8116/nautilus/bookkeeper
   tag: 0.9.0-2641.0c98b91cd
   pullPolicy: IfNotPresent
-
 hooks:
   image:
     repository: lachlanevenson/k8s-kubectl
@@ -39,16 +37,15 @@ options:
   log.level: "INFO"
   ledgerStorageClass: "org.apache.bookkeeper.bookie.InterleavedLedgerStorage"
   flushEntrylogBytes: "134217728"
-  minorCompactionThreshold: "0.4"       
+  minorCompactionThreshold: "0.4"
   minorCompactionInterval: "3600"
-  majorCompactionThreshold: "0.8"       
-  majorCompactionInterval: "43200"       
+  majorCompactionThreshold: "0.8"
+  majorCompactionInterval: "43200"
   isForceGCAllowWhenNoSpace: "true"
   gcWaitTime: "600000"
   flushEntrylogBytes: "134217728"
   isThrottleByBytes: "true"
   compactionRateByBytes: "1000000"
-
   # Throttle compaction by bytes or by entries.
   # isThrottleByBytes=false
   # Set the rate at which compaction will readd entries. The unit is adds per second.
