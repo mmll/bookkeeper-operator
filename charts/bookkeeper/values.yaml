@@ -16,7 +16,7 @@ hooks:
   image:
     repository: lachlanevenson/k8s-kubectl
     tag: v1.16.10
-replicas: 1
+replicas: 4
 zookeeperUri: 10.107.39.26:2181
 pravegaClusterName: prvg-pravega
 autoRecovery: true
@@ -28,7 +28,7 @@ resources:
     cpu: 2000m
     memory: 3Gi
 jvmOptions:
-  memoryOpts: ["-Xmx1g", "-XX:MaxDirectMemorySize=1g","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/","-XX:NativeMemoryTracking=detail"]
+  memoryOpts: ["-Xmx1g", "-XX:MaxDirectMemorySize=1g","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/ledger","-XX:NativeMemoryTracking=detail"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
