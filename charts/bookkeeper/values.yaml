@@ -5,10 +5,10 @@ apiVersion: "bookkeeper.pravega.io/v1alpha1"
 kind: "BookkeeperCluster"
 metadata:
   name: "pravega-bk"
-version: 0.9.0-2641.0c98b91cd
+version: 0.9.0-2654.d60b35892-issue-5067-make-slts-api-async
 image:
   repository: devops-repo.isus.emc.com:8116/nautilus/bookkeeper
-  tag: 0.9.0-2641.0c98b91cd
+  tag: 0.9.0-2654.d60b35892-issue-5067-make-slts-api-async
   pullPolicy: IfNotPresent
 hooks:
   image:
