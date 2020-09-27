@@ -5,10 +5,10 @@ apiVersion: "bookkeeper.pravega.io/v1alpha1"
 kind: "BookkeeperCluster"
 metadata:
   name: "pravega-bk"
-version: 0.9.0-2654.d60b35892-issue-5067-make-slts-api-async
+version: 0.8.0-2600.4df7f9a4d-1.2-W8-2-e554360
 image:
   repository: devops-repo.isus.emc.com:8116/nautilus/bookkeeper
-  tag: 0.9.0-2654.d60b35892-issue-5067-make-slts-api-async
+  tag: 0.8.0-2600.4df7f9a4d-1.2-W8-2-e554360
   pullPolicy: IfNotPresent
 hooks:
   image:
@@ -26,7 +26,7 @@ resources:
     cpu: 2
     memory: 5Gi
 jvmOptions:
-  memoryOpts: [ "-Xmx1843m", "-XX:MaxDirectMemorySize=1843m" ,"-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/bk/ledgers","-XX:NativeMemoryTracking=detail"]
+  memoryOpts: [ "-Xmx2g", "-XX:MaxDirectMemorySize=2g" ,"-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/bk/ledgers","-XX:NativeMemoryTracking=detail"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
