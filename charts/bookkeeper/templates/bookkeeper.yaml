@@ -33,18 +33,26 @@ spec:
           requests:
             storage: 10Gi
   options:
-    enableStatistics: "true"
-    statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
-    log.level: "INFO"
-    ledgerStorageClass: "org.apache.bookkeeper.bookie.InterleavedLedgerStorage"
-    flushEntrylogBytes: "134217728"
-    minorCompactionThreshold: "0.4"       
-    minorCompactionInterval: "3600"
-    majorCompactionThreshold: "0.8"       
-    majorCompactionInterval: "43200"       
-    isForceGCAllowWhenNoSpace: "true"
-    isThrottleByBytes: "true"
-    compactionRateByBytes: "1000000"
+      enableStatistics: "true"
+      statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
+      log.level: "INFO"
+      ledgerStorageClass: "org.apache.bookkeeper.bookie.InterleavedLedgerStorage"
+      flushEntrylogBytes: "134217728"
+      minorCompactionThreshold: "0.4"
+      minorCompactionInterval: "1800"
+      majorCompactionThreshold: "0.8"
+      majorCompactionInterval: "43200"
+      isForceGCAllowWhenNoSpace: "true"
+      gcWaitTime: "600000"
+      flushInterval: "60000"
+      numAddWorkerThreads: "8"
+      entryLogPerLedgerEnabled: "true"
+      readBufferSizeBytes: "4096"
+      writeBufferSizeBytes: "524288"
+      isThrottleByBytes: "true"
+      compactionRateByBytes: "1000000"
+      journalDirectories: "/bk/journal/j0,/bk/journal/j1,/bk/journal/j2,/bk/journal/j3,/bk/journal/j4,/bk/journal/j5,/bk/journal/j6,/bk/journal/j7"
+      ledgerDirectories: "/bk/ledgers/"
   jvmOptions:
     {{- if .Values.jvmOptions }}
 {{ toYaml .Values.jvmOptions | indent 4 }}
