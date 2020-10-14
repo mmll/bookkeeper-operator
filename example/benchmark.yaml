@@ -1,0 +1,35 @@
+kind: Job
+apiVersion: batch/v1
+metadata:
+  name: bookkeeper-benchmark-1
+spec:
+  parallelism: 1
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: benchmark
+          # You must set the image below to a valid value.
+          image: aaronwuw/bookkeeper-benchmark:latest
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "2"
+              memory: "4Gi"
+            requests:
+              cpu: "1"
+              memory: "4Gi"
+          args: [
+            "writes",
+            "-zookeeper", "prvgzk-zookeeper-client:2181",
+            "-quorum", "3",
+            "-ackQuorum", "3",
+            "-entrysize", "1000000",
+            "-ledgers", "10",
+            "-skipwarmup", "true",
+            "-throttle","5",
+            "-time", "1200",
+          ]
+          env:
+            - name: JAVA_OPTS
+              value: "-Xmx2g -Xms1g"
