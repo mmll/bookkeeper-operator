@@ -32,17 +32,6 @@ spec:
         resources:
           requests:
             storage: 10Gi
-  options:
-    enableStatistics: "true"
-    statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
-    log.level: "INFO"
-    ledgerStorageClass: "org.apache.bookkeeper.bookie.InterleavedLedgerStorage"
-    flushEntrylogBytes: "134217728"
-    minorCompactionThreshold: "0.4"       
-    minorCompactionInterval: "1800"       
-    majorCompactionThreshold: "0.8"       
-    majorCompactionInterval: "43200"       
-    isForceGCAllowWhenNoSpace: "true"
   jvmOptions:
     {{- if .Values.jvmOptions }}
 {{ toYaml .Values.jvmOptions | indent 4 }}
