@@ -43,3 +43,6 @@ spec:
     requests:
       cpu: {{ .Values.resources.requests.cpu }}
       memory: {{ .Values.resources.requests.memory }}
+  options:
+{ { toYaml .Values.options | indent 4 } }
+  { { - end } }

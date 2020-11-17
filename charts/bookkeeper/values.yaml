@@ -45,4 +45,3 @@ options:
   majorCompactionInterval: "43200"       
   isForceGCAllowWhenNoSpace: "true"
   gcWaitTime: "600000"
-  flushEntrylogBytes: "134217728"
