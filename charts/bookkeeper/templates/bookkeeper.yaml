@@ -38,11 +38,10 @@ spec:
     {{- end }}
   resources:
     limits:
-      cpu: {{ .Values.resources.limits.cpu }}
       memory: {{ .Values.resources.limits.memory }}
     requests:
-      cpu: {{ .Values.resources.requests.cpu }}
       memory: {{ .Values.resources.requests.memory }}
   options:
-{ { toYaml .Values.options | indent 4 } }
-  { { - end } }
+    {{- if .Values.options }}       
+{{ toYaml .Values.options | indent 4 }}
+    {{- end }}
