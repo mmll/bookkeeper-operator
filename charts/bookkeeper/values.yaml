@@ -16,6 +16,8 @@ hooks:
   image:
     repository: lachlanevenson/k8s-kubectl
     tag: v1.16.10
+storage:
+  className: baremetal-csi-sc-hddlvg
 replicas: 4
 zookeeperUri: 10.107.39.26:2181
 pravegaClusterName: prvg-pravega
