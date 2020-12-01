@@ -22,13 +22,13 @@ pravegaClusterName: prvg-pravega
 autoRecovery: true
 resources:
   requests:
-    cpu: 2000m
-    memory: 3Gi
+    cpu: 1000m
+    memory: 2Gi
   limits:
     cpu: 2000m
-    memory: 3Gi
+    memory: 2Gi
 jvmOptions:
-  memoryOpts: ["-Xmx1g", "-XX:MaxDirectMemorySize=1g","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/ledger","-XX:NativeMemoryTracking=detail"]
+  memoryOpts: ["-Xms500m","-Xmx500m", "-XX:MaxDirectMemorySize=500m","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/ledger","-XX:NativeMemoryTracking=detail"]
   gcOpts: []
   gcLoggingOpts: []
   extraOpts: []
@@ -38,10 +38,12 @@ options:
   statsProviderClass: "org.apache.bookkeeper.stats.prometheus.PrometheusMetricsProvider"
   log.level: "INFO"
   ledgerStorageClass: "org.apache.bookkeeper.bookie.InterleavedLedgerStorage"
-  flushEntrylogBytes: "134217728"
+  flushEntrylogBytes: "268435456"
   minorCompactionThreshold: "0.4"       
   minorCompactionInterval: "1800"       
   majorCompactionThreshold: "0.8"       
   majorCompactionInterval: "43200"       
   isForceGCAllowWhenNoSpace: "true"
+  isThrottleByBytes: "true"
+  compactionRateByBytes: "1000000"
   gcWaitTime: "600000"
