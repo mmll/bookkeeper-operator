@@ -22,10 +22,10 @@ pravegaClusterName: prvg-pravega
 autoRecovery: true
 resources:
   requests:
-    cpu: 1000m
+    cpu: 4000m
     memory: 7Gi
   limits:
-    cpu: 2000m
+    cpu: 4000m
     memory: 7Gi
 jvmOptions:
   memoryOpts: ["-Xmx2g", "-XX:MaxDirectMemorySize=4g","-XX:+HeapDumpOnOutOfMemoryError", "-XX:HeapDumpPath=/opt/ledger","-XX:NativeMemoryTracking=detail"]
